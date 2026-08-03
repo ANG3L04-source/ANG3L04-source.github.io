@@ -4,104 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro IA | El Blog de Inteligencia Artificial</title>
-    <!-- Tailwind CSS desde CDN para que el diseño funcione sin compilar -->
-    <script src="https://tailwindcss.com"></script>
-
+    <style>
+        /* CSS PREMIUM INTEGRADO - EVITA EL FONDO BLANCO Y DA EFECTOS FUTURISTAS */
+        body { 
+            background-color: #0b0f19; 
+            color: #f3f4f6; 
+            font-family: system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            padding: 0;
+        }
+        header { 
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%); 
+            padding: 25px; 
+            border-bottom: 2px solid #3b82f6; 
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-cols: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .main-container { grid-template-columns: 2fr 1fr; }
+        }
+        /* TARJETAS MODERNAS CON IMÁGENES */
+        .card { 
+            background-color: #1f2937; 
+            border-radius: 16px; 
+            overflow: hidden; 
+            margin-bottom: 30px; 
+            border: 1px solid #374151;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .card-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid #374151;
+        }
+        .card-content { padding: 25px; }
+        .tag {
+            background-color: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .card h2 { font-size: 24px; margin: 15px 0 10px 0; color: #ffffff; }
+        .card p { color: #9ca3af; line-height: 1.7; font-size: 15px; }
+        /* BLOQUES DE PUBLICIDAD PERFECTAMENTE DESTACADOS */
+        .anuncio-box { 
+            border: 2px dashed #4b5563; 
+            background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+            padding: 30px 20px; 
+            text-align: center; 
+            border-radius: 16px; 
+            margin: 25px 0; 
+            color: #9ca3af; 
+            font-family: monospace;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+        }
+        .anuncio-tag { font-size: 11px; color: #3b82f6; tracking-widest: 1px; display: block; margin-bottom: 10px; font-weight: bold; }
+        aside { background-color: #111827; padding: 25px; border-radius: 16px; border: 1px solid #374151; height: fit-content; }
+        footer { text-align: center; padding: 30px; color: #4b5563; border-top: 1px solid #1f2937; margin-top: 50px; font-size: 14px; }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body>
 
-    <!-- CABECERA / NAV -->
-    <header class="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">FUTURO IA</a>
-            <nav class="space-x-6 text-sm font-medium hidden md:flex">
-                <a href="#" class="hover:text-blue-400 transition">Inicio</a>
-                <a href="#" class="hover:text-blue-400 transition">Tutoriales</a>
-                <a href="#" class="hover:text-blue-400 transition">Herramientas</a>
-                <a href="#" class="hover:text-blue-400 transition">Monetización</a>
-            </nav>
-        </div>
+    <!-- CABECERA DE LA WEB -->
+    <header>
+        <h1 class="logo">FUTURO IA</h1>
+        <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">Herramientas avanzadas y monetización de webs automáticas</p>
     </header>
 
-    <!-- BLOQUE DE PUBLICIDAD PRINCIPAL (BANNER SUPERIOR) -->
-    <div class="max-w-6xl mx-auto px-4 mt-6">
-        <div class="bg-gray-800 border-2 border-dashed border-gray-600 rounded-lg p-4 text-center my-4">
-            <span class="text-xs text-gray-500 uppercase tracking-widest block mb-1">Publicidad</span>
-            <div class="text-sm text-gray-400 font-mono">[ AQUÍ VA EL CÓDIGO DE ANUNCIO SUPERIOR / BANNER 728x90 ]</div>
-            <!-- Cuando tengas tu código de Adsterra/AdSense, borras la línea de arriba y pegas tu script aquí -->
+    <!-- CONTENEDOR DE PUBLICIDAD SUPERIOR -->
+    <div style="max-width: 1100px; margin: 20px auto 0 auto; padding: 0 20px;">
+        <div class="anuncio-box">
+            <span class="anuncio-tag">ZONA PUBLICITARIA DISPONIBLE</span>
+            [ COPIA AQUÍ TU CÓDIGO DE BANNER SUPERIOR 728x90 ]
         </div>
     </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- CONTENIDO CON DISEÑO EN COLUMNAS -->
+    <div class="main-container">
         
-        <!-- SECCIÓN DE ARTÍCULOS (COLUMNA IZQUIERDA Y CENTRAL) -->
-        <section class="lg:col-span-2 space-y-8">
-            <h1 class="text-3xl font-bold border-b border-gray-700 pb-2">Últimas publicaciones</h1>
-            
+        <!-- COLUMNA PRINCIPAL DE ARTÍCULOS -->
+        <main>
             <!-- Artículo 1 -->
-            <article class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300">
-                <div class="p-6">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-400">Guías Prácticas</span>
-                    <h2 class="text-2xl font-bold mt-2 mb-3 hover:text-blue-400 cursor-pointer">Cómo crear webs automáticas con IA y monetizarlas desde cero</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">La Inteligencia Artificial ha cambiado las reglas del juego de la creación de contenidos. Hoy en día es posible estructurar blogs temáticos completos utilizando prompts avanzados en modelos de lenguaje. En este artículo te explicamos cómo estructurar tu sitio para atraer clics orgánicos...</p>
-                    <div class="flex items-center text-xs text-gray-500 space-x-4">
-                        <span>Por Redacción Futuro IA</span>
-                        <span>•</span>
-                        <span>Hace 1 hora</span>
-                    </div>
+            <article class="card">
+                <!-- Imagen real sobre inteligencia artificial -->
+                <img class="card-img" src="https://unsplash.com" alt="Inteligencia Artificial">
+                <div class="card-content">
+                    <span class="tag">Estrategia</span>
+                    <h2>Cómo crear webs automáticas con IA y monetizarlas desde cero</h2>
+                    <p>La Inteligencia Artificial ha cambiado por completo las reglas de creación de contenido en Internet. Hoy en día es completamente viable estructurar blogs automáticos de nicho utilizando prompts avanzados para atraer miles de visitas mensuales desde Google y generar ingresos pasivos constantes mediante clics.</p>
                 </div>
             </article>
 
-            <!-- BLOQUE DE PUBLICIDAD EN MEDIO DE LOS ARTÍCULOS -->
-            <div class="bg-gray-800 border-2 border-dashed border-gray-600 rounded-lg p-6 text-center">
-                <span class="text-xs text-gray-500 uppercase tracking-widest block mb-1">Publicidad</span>
-                <div class="text-sm text-gray-400 font-mono">[ AQUÍ VA EL CÓDIGO DE ANUNCIO ENTRE PÁRRAFOS ]</div>
+            <!-- ANUNCIO INTEGRADO ENTRE ARTÍCULOS -->
+            <div class="anuncio-box">
+                <span class="anuncio-tag">PUBLICIDAD INTEGRADA</span>
+                [ COPIA AQUÍ TU CÓDIGO DE ANUNCIO NATIVO PARA CONTENIDO ]
             </div>
 
             <!-- Artículo 2 -->
-            <article class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
-                <div class="p-6">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-purple-400">Herramientas</span>
-                    <h2 class="text-2xl font-bold mt-2 mb-3 hover:text-purple-400 cursor-pointer">Las 5 mejores herramientas de IA gratuitas para generar texto SEO en 2026</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">Optimizar tus artículos para motores de búsqueda es vital si quieres generar clics e impresiones que llenen tu cuenta bancaria. Analizamos las plataformas gratuitas más potentes del año para redactar copies, títulos llamativos y estructuras preparadas para indexar...</p>
-                    <div class="flex items-center text-xs text-gray-500 space-x-4">
-                        <span>Por Redacción Futuro IA</span>
-                        <span>•</span>
-                        <span>Ayer</span>
-                    </div>
+            <article class="card">
+                <!-- Imagen real sobre tecnología futurista -->
+                <img class="card-img" src="https://unsplash.com" alt="Diseño Futurista">
+                <div class="card-content">
+                    <span class="tag">Herramientas</span>
+                    <h2>Las mejores herramientas de IA gratuitas para generar tráfico web</h2>
+                    <p>Optimizar tus artículos para motores de búsqueda (SEO) es la clave principal si quieres que tus espacios publicitarios se llenen de beneficios. Analizamos los generadores de copies y estructuradores de texto automáticos más estables del mercado para acelerar tu producción diaria.</p>
                 </div>
             </article>
-        </section>
+        </main>
 
-        <!-- BARRA LATERAL / SIDEBAR (COLUMNA DERECHA) -->
-        <aside class="space-y-6">
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-4">Sobre este proyecto</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Este es un blog automatizado diseñado para procesar información sobre los avances de la Inteligencia Artificial y generar ingresos pasivos a través de redes de anuncios integradas por clics.</p>
-            </div>
-
-            <!-- BLOQUE DE PUBLICIDAD LATERAL (BANNER CUADRADO o SKYSCRAPER) -->
-            <div class="bg-gray-800 border-2 border-dashed border-gray-600 rounded-lg p-6 text-center">
-                <span class="text-xs text-gray-500 uppercase tracking-widest block mb-1">Publicidad Lateral</span>
-                <div class="text-sm text-gray-400 font-mono">[ ANUNCIO LATERAL 300x250 ]</div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-4">Temas Populares</h3>
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full cursor-pointer hover:bg-blue-600 transition">Prompts</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full cursor-pointer hover:bg-blue-600 transition">GitHub Pages</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full cursor-pointer hover:bg-blue-600 transition">Monetización</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full cursor-pointer hover:bg-blue-600 transition">SEO</span>
-                </div>
+        <!-- BARRA LATERAL -->
+        <aside>
+            <h3 style="color: #ffffff; font-size: 18px; margin-top: 0; border-b: 1px solid #374151; padding-bottom: 10px;">Panel de Gestión</h3>
+            <p style="color: #9ca3af; font-size: 14px; line-height: 1.6;">Este blog funciona como una estructura de nicho automatizada para recopilar noticias tecnológicas e integrarse directamente con plataformas publicitarias de pago por impresión.</p>
+            
+            <!-- ANUNCIO EN BARRA LATERAL -->
+            <div class="anuncio-box" style="padding: 20px 10px;">
+                <span class="anuncio-tag">BANNER LATERAL</span>
+                [ ANUNCIO 300x250 ]
             </div>
         </aside>
-    </main>
+
+    </div>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="bg-gray-900 border-t border-gray-800 mt-12 py-6 text-center text-sm text-gray-500">
-        <p>&copy; 2026 Futuro IA. Todos los derechos reservados. Gestionado de forma independiente.</p>
+    <footer>
+        <p>&copy; 2026 Futuro IA. Sitio web optimizado para monetización pasiva de tráfico.</p>
     </footer>
 
 </body>
