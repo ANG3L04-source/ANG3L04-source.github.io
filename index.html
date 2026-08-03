@@ -34,7 +34,7 @@
             margin: 40px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-cols: 1fr;
+            grid-template-columns: 1fr;
             gap: 30px;
         }
         @media (min-width: 768px) {
@@ -51,10 +51,13 @@
             transition: transform 0.3s ease;
         }
         .card:hover { transform: translateY(-5px); border-color: #3b82f6; }
-        .card-img {
+        .image-placeholder {
             width: 100%;
             height: 240px;
-            object-fit: cover;
+            background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 1px solid #374151;
         }
         .card-content { padding: 25px; }
@@ -109,8 +112,10 @@
         <main>
             <!-- Artículo 1 -->
             <article class="card">
-                <!-- IMAGEN CORREGIDA CON ENLACE DIRECTO REAL -->
-                <img class="card-img" src="https://picsum.photos" alt="Inteligencia Artificial">
+                <!-- GRÁFICO SEGURO DE INTELIGENCIA ARTIFICIAL -->
+                <div class="image-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12"/><path d="M6 12h12"/><circle cx="12" cy="12" r="3" fill="#4c1d95"/></svg>
+                </div>
                 <div class="card-content">
                     <span class="tag">Estrategia</span>
                     <h2>Cómo crear webs automáticas con IA y monetizarlas desde cero</h2>
@@ -126,8 +131,10 @@
 
             <!-- Artículo 2 -->
             <article class="card">
-                <!-- IMAGEN CORREGIDA CON ENLACE DIRECTO REAL -->
-                <img class="card-img" src="https://picsum.photos" alt="Diseño Futurista">
+                <!-- GRÁFICO SEGURO TECNOLÓGICO -->
+                <div class="image-placeholder" style="background: linear-gradient(135deg, #065f46 0%, #111827 100%);">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
                 <div class="card-content">
                     <span class="tag">Herramientas</span>
                     <h2>Las mejores herramientas de IA gratuitas para generar tráfico web</h2>
