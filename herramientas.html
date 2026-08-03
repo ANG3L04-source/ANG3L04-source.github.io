@@ -3,58 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas de IA Gratuitas | Futuro IA</title>
+    <title>Directorio de Herramientas de IA Gratuitas | Futuro IA</title>
     <style>
-        body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, sans-serif; margin: 0; padding: 0; }
-        header { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); padding: 25px; border-bottom: 2px solid #3b82f6; text-align: center; }
-        .logo { font-size: 32px; font-weight: 900; background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; }
-        .main-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
-        @media (min-width: 768px) { .main-container { grid-template-columns: 2fr 1fr; } }
-        .card { background-color: #1f2937; border-radius: 16px; padding: 25px; margin-bottom: 30px; border: 1px solid #374151; }
-        .card-banner { width: 100%; height: 120px; background: linear-gradient(135deg, #065f46 0%, #10b981 100%); border-radius: 12px; margin-bottom: 15px; }
-        .anuncio-box { border: 2px dashed #4b5563; background: #111827; padding: 25px; text-align: center; border-radius: 16px; margin: 25px 0; color: #9ca3af; font-family: monospace; }
+        /* CSS PREMIUM INTEGRADO - MODO OSCURO FUTURISTA */
+        body { 
+            background-color: #0b0f19; 
+            color: #f3f4f6; 
+            font-family: system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            padding: 0;
+        }
+        header { 
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%); 
+            padding: 25px; 
+            border-bottom: 2px solid #3b82f6; 
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        nav a { color: #f3f4f6; text-decoration: none; margin: 0 10px; font-size: 14px; transition: color 0.3s; }
+        nav a:hover { color: #3b82f6; }
+        
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 992px) {
+            .main-container { grid-template-columns: 3fr 1fr; }
+        }
+
+        /* DISEÑO DE CATEGORÍAS Y TARJETAS EN CUADRÍCULA */
+        .section-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+            border-left: 4px solid #3b82f6;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .grid-herramientas {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 640px) {
+            .grid-herramientas { grid-template-columns: 1fr 1fr; }
+        }
+        .tool-card {
+            background-color: #1f2937;
+            border-radius: 14px;
+            padding: 20px;
+            border: 1px solid #374151;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .tool-card:hover { transform: translateY(-3px); border-color: #8b5cf6; }
+        .tool-card h4 { color: #ffffff; font-size: 18px; margin: 0 0 10px 0; font-weight: 700; }
+        .tool-card p { color: #9ca3af; font-size: 14px; line-height: 1.6; margin: 0 0 15px 0; }
+        
+        /* DETALLES DE LIMITACIÓN GRATUITA */
+        .limit-box {
+            background-color: #111827;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #a78bfa;
+            border-left: 3px solid #8b5cf6;
+            margin-bottom: 10px;
+        }
+        .link-btn {
+            display: inline-block;
+            text-align: center;
+            background-color: #3b82f6;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .link-btn:hover { background-color: #2563eb; }
+
+        /* BLOQUES DE PUBLICIDAD */
+        .anuncio-box { 
+            border: 2px dashed #4b5563; 
+            background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+            padding: 30px 20px; 
+            text-align: center; 
+            border-radius: 16px; 
+            margin: 35px 0; 
+            color: #9ca3af; 
+            font-family: monospace;
+        }
+        .anuncio-tag { font-size: 11px; color: #3b82f6; tracking-widest: 1px; display: block; margin-bottom: 10px; font-weight: bold; }
+        
         aside { background-color: #111827; padding: 25px; border-radius: 16px; border: 1px solid #374151; height: fit-content; }
-        footer { text-align: center; padding: 30px; color: #4b5563; border-top: 1px solid #1f2937; margin-top: 50px; }
+        footer { text-align: center; padding: 30px; color: #4b5563; border-top: 1px solid #1f2937; margin-top: 60px; }
     </style>
 </head>
 <body>
 
+    <!-- CABECERA DE LA WEB -->
     <header>
         <h1 class="logo">FUTURO IA</h1>
-        
-        <!-- EL MENÚ SCONCRONIZADO VA AQUÍ (LÍNEA 30 EN ADELANTE) -->
-        <nav style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; font-size: 14px;">
-            <a href="index.html" style="color: #f3f4f6; text-decoration: none;">Inicio</a>
-            <a href="tutoriales.html" style="color: #f3f4f6; text-decoration: none;">Tutoriales Prompts</a>
-            <a href="herramientas.html" style="color: #3b82f6; text-decoration: none; font-weight: bold;">Herramientas Gratuitas</a>
-            <a href="ganar-dinero.html" style="color: #f3f4f6; text-decoration: none;">Guía Monetización</a>
+        <nav style="margin-top: 15px;">
+            <a href="index.html">Inicio</a>
+            <a href="tutoriales.html">Tutoriales Prompts</a>
+            <a href="herramientas.html" style="color: #3b82f6; font-weight: bold;">Herramientas Gratuitas</a>
+            <a href="ganar-dinero.html">Guía Monetización</a>
         </nav>
     </header>
 
-
-    <div class="main-container">
-        <main>
-            <div class="card">
-                <div class="card-banner"></div>
-                <h2>Las mejores IA de Generación de Texto sin pagar nada</h2>
-                <p>Para alimentar tu blog automático necesitas redactores potentes. Te explicamos los límites gratuitos de Claude 3.5 Sonnet, ChatGPT-4o mini y Perplexity AI para sacar artículos SEO perfectos.</p>
-            </div>
-
-            <!-- PUBLICIDAD EXCLUSIVA DE ESTA PÁGINA -->
-            <div class="anuncio-box">
-                <span>[ COPIA AQUÍ OTRO CÓDIGO DE ANUNCIO DE ADSTERRA ]</span>
-            </div>
-        </main>
-
-        <aside>
-            <h3>Filtros rápidos</h3>
-            <p>Sección dedicada exclusivamente a recopilar software de Inteligencia Artificial sin suscripciones de pago.</p>
-        </aside>
+    <!-- ANUNCIO SUPERIOR -->
+    <div style="max-width: 1100px; margin: 20px auto 0 auto; padding: 0 20px;">
+        <div class="anuncio-box">
+            <span class="anuncio-tag">ZONA PUBLICITARIA SUPERIOR (BANNER 728x90)</span>
+            [ PEGA AQUÍ TU CÓDIGO DE ADSTERRA ]
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Futuro IA. Sección Herramientas.</p>
-    </footer>
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="main-container">
+        
+        <main>
+            <div style="margin-bottom: 40px;">
+                <h2 style="font-size: 32px; margin-bottom: 10px;">El Megadirectorio de IA Sin Pagar</h2>
+                <p style="color: #9ca3af; line-height: 1.6; font-size: 16px;">Hemos recopilado, analizado y probado las mejores herramientas de Inteligencia Artificial del mercado actual que ofrecen planes gratuitos reales. Utiliza este arsenal tecnológico para automatizar la creación de tus contenidos y multiplicar tus ingresos por clics.</p>
+            </div>
 
-</body>
-</html>
+            <!-- CATEGORÍA 1 -->
+            <div class="section-title">1. Generación de Texto y Redacción SEO</div>
+            <div class="grid-herramientas">
+                <div class="tool-card">
+                    <div>
+                        <h4>ChatGPT-4o mini</h4>
+                        <p>Ideal para redactar borradores rápidos, responder listas de preguntas masivas y generar ideas de artículos en segundos. Es el modelo más rápido y con menos restricciones de uso.</p>
+                    </div>
+                    <div>
+                        <div class="limit-box">Plan Gratis: Uso ilimitado de texto (con límites dinámicos de velocidad).</div>
+                        <a href="https://chatgpt.com" target="_blank" class="link-btn">Abrir Herramienta</a>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div>
+                        <h4>Claude 3.5 Sonnet</h4>
+                        <p>El rey indiscutible de la redacción humana. Genera textos con un tono extremadamente natural, estructurado y sin usar frases robóticas ni repetitivas. Perfecto para artículos SEO premium.</p>
+                    </div>
+                    <div>
+                        <div class="limit-box">Plan Gratis: Créditos diarios renovables (se agotan según el uso intensivo).</div>
+                        <a href="https://claude.ai" target="_blank" class="link-btn">Abrir Herramienta</a>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div>
+                        <h4>Perplexity AI</h4>
+                        <p>Un buscador inteligente conectado a internet en tiempo real. Le pides un tema y redacta un resumen citando las fuentes verdaderas. Ideal para que tus blogs no tengan datos inventados.</p>
+                    </div>
+                    <div>
+                        <div class="limit-box">Plan Gratis: Búsquedas estándar ilimitadas / 5 búsquedas Pro al día.</div>
+                        <a href="https://perplexity.ai" target="_blank" class="link-btn">Abrir Herramienta</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANUNCIO INTEGRADO CENTRAL -->
+            <div class="anuncio-box">
+                <span class="anuncio-tag">PUBLICIDAD EN CONTENIDO DE ALTO ENGANCHE (NATIVE BANNER)</span>
+                [ PEGA AQUÍ TU CÓDIGO DE ADSTERRA ]
+            </div>
+
+            <!-- CATEGORÍA 2 -->
+            <div class="section-title">2. Generación de Imágenes Artísticas y Web</div>
+            <div class="grid-herramientas">
+                <div class="tool-card">
+                    <div>
+                        <h4>Leonardo.ai</h4>
+                        <p>Una de las plataformas de diseño más potentes del mundo. Permite generar imágenes de alta definición con un realismo espectacular para las portadas de tus artículos o redes sociales.</p>
+                    </div>
+                    <div>
+                        <div class="limit-box">Plan Gratis: 150 créditos diarios gratuitos (se recargan cada 24 horas).</div>
+                        <a href="https://leonardo.ai" target="_blank" class="link-btn">Abrir Herramienta</a>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div>
+                        <h4>Microsoft Designer (DALL-E 3)</h4>
+                        <p>Acceso completamente gratuito al motor de generación de imágenes de OpenAI. Integra comandos de texto sencillos para crear ilustraciones limpias y banners corporativos rápidamente.</p>
+                    </div>
+                    <div>
+                        <div class="limit-box">Plan Gratis: Generaciones rápidas diarias usando tu cuenta de Outlook/Hotmail.</div>
+                        <a href="https://microsoft.com" target="_blank" class="link-btn">Abrir Herramienta</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 3 -->
+            <div class="section-title">3. Creación y Clonación de Vídeo Automático</div>
+            <div class="grid-herramientas">
+                <div class="tool-card">
+                    <div>
+                        <h4>HeyGen</h4>
+
