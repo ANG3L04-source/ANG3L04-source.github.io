@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Guía de Prompts Avanzados | Futuro IA</title>
+    <style>
+        /* CSS PREMIUM INTEGRADO - MODO OSCURO CYBERPUNK */
+        body { 
+            background-color: #0b0f19; 
+            color: #f3f4f6; 
+            font-family: system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            padding: 0;
+        }
+        header { 
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%); 
+            padding: 25px; 
+            border-bottom: 2px solid #3b82f6; 
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        nav a { color: #f3f4f6; text-decoration: none; margin: 0 10px; font-size: 14px; transition: color 0.3s; }
+        nav a:hover { color: #3b82f6; }
+        
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 992px) {
+            .main-container { grid-template-columns: 3fr 1fr; }
+        }
+
+        /* DISEÑO DE CONTENIDO Y APARTADOS */
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .tutorial-card {
+            background-color: #1f2937;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid #374151;
+        }
+        .tutorial-card h3 { color: #3b82f6; margin-top: 0; font-size: 22px; }
+        
+        /* CAJAS DE ANTES / DESPUÉS */
+        .prompt-box {
+            background-color: #111827;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #1e293b;
+            font-family: monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .badge-bad { background-color: rgba(239, 68, 68, 0.2); color: #f87171; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: bold; }
+        .badge-good { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: bold; }
+        
+        /* BLOQUES DE PUBLICIDAD ESTRATÉGICOS */
+        .anuncio-box { 
+            border: 2px dashed #4b5563; 
+            background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+            padding: 30px 20px; 
+            text-align: center; 
+            border-radius: 16px; 
+            margin: 35px 0; 
+            color: #9ca3af; 
+            font-family: monospace;
+        }
+        .anuncio-tag { font-size: 11px; color: #8b5cf6; tracking-widest: 1px; display: block; margin-bottom: 10px; font-weight: bold; }
+        
+        aside { background-color: #111827; padding: 25px; border-radius: 16px; border: 1px solid #374151; height: fit-content; }
+        footer { text-align: center; padding: 30px; color: #4b5563; border-top: 1px solid #1f2937; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA CON MENÚ PASANTE -->
+    <header>
+        <h1 class="logo">FUTURO IA</h1>
+        <nav style="margin-top: 15px;">
+            <a href="index.html">Inicio</a>
+            <a href="tutoriales.html" style="color: #3b82f6; font-weight: bold;">Tutoriales Prompts</a>
+            <a href="herramientas.html">Herramientas Gratuitas</a>
+        </nav>
+    </header>
+
+    <!-- ANUNCIO DE ENTRADA SUPERIOR -->
+    <div style="max-width: 1100px; margin: 20px auto 0 auto; padding: 0 20px;">
+        <div class="anuncio-box">
+            <span class="anuncio-tag">PUBLICIDAD MÁXIMO CTR (728x90)</span>
+            [ PEGA AQUÍ TU CÓDIGO DE BANNER ADSTERRA ]
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE LA GUÍA -->
+    <div class="main-container">
+        
+        <main>
+            <div style="margin-bottom: 40px;">
+                <h2 style="font-size: 32px; margin-bottom: 10px;">Laboratorio de Prompts Avanzados</h2>
+                <p style="color: #9ca3af; line-height: 1.6; font-size: 16px;">Aprende las técnicas ocultas de ingeniería de instrucciones para obligar a la IA a redactar, programar y analizar como un profesional senior. Copia los ejemplos probados y aplícalos en ChatGPT o Claude.</p>
+            </div>
+
+            <!-- APARTADO 1 -->
+            <div class="section-title">1. El Framework RTCE (Rol, Tarea, Contexto, Ejecución)</div>
+            <div class="tutorial-card">
+                <h3>La estructura perfecta para cualquier prompt</h3>
+                <p>El mayor error de los usuarios inexpertos es pedirle cosas a la IA en una sola frase corta. Para enganchar contenido de alta calidad profesional necesitas utilizar el framework de cuatro pilares básicos:</p>
+                
+                <div class="prompt-box">
+                    <span class="badge-bad">PROMPT NOVATO:</span><br><br>
+                    "Escribe un artículo sobre cómo invertir en criptomonedas."
+                </div>
+                
+                <p style="color: #9ca3af; font-size: 14px; margin: 15px 0;">🔴 Resultado: Un texto genérico, aburrido, repetitivo y que Google penalizará por falta de valor original.</p>
+
+                <div class="prompt-box">
+                    <span class="badge-good">PROMPT PRO (Framework RTCE):</span><br><br>
+                    "<strong>[ROL]</strong> Actúa como un asesor financiero senior y experto en SEO técnico.<br>
+                    <strong>[TAREA]</strong> Redacta una guía de 1,500 palabras detallando una estrategia de inversión segura en criptoactivos para este año.<br>
+                    <strong>[CONTEXTO]</strong> El artículo va dirigido a principiantes que tienen miedo de perder sus ahorros, usa un tono educativo y cercano.<br>
+                    <strong>[EJECUCIÓN]</strong> Estructúralo con subtítulos H2/H3, listas de viñetas, añade una tabla comparativa de riesgos y evita palabras repetitivas como 'en resumen' o 'es importante destacar'."
+                </div>
+                <p style="color: #4ade80; font-size: 14px;">🟢 Resultado: Un texto premium, listo para publicar, optimizado para indexar en buscadores y altamente adictivo para el lector.</p>
+            </div>
+
+            <!-- ANUNCIO INTERMEDIO CRUCIAL -->
+            <div class="anuncio-box">
+                <span class="anuncio-tag">ANUNCIO NATIVO ENTRE CONTENIDO</span>
+                [ PEGA AQUÍ TU SEGUNDO CÓDIGO DE ADSTERRA ]
+            </div>
+
+            <!-- APARTADO 2 -->
+            <div class="section-title">2. Técnicas de Few-Shot Prompting (Dar Ejemplos)</div>
+            <div class="tutorial-card">
+                <h3>Entrena a la IA en segundos antes de que responda</h3>
+                <p>Si quieres que la IA replique exactamente tu estilo de escritura, tu humor o una estructura específica de datos, no se lo expliques teóricamente: **muéstrale ejemplos reales** antes de darle la orden definitiva.</p>
+                
+                <div class="prompt-box">
+                    "Quiero que generes títulos llamativos para artículos de tecnología. Sigue la lógica de estos ejemplos:<br><br>
+                    Ejemplo 1: 'El fin de los programadores: Cómo la IA está devorando el software'<br>
+                    Ejemplo 2: 'WhatsApp cambió para siempre y nadie se ha dado cuenta todavía'<br><br>
+                    Ahora, genera 5 opciones de títulos con este mismo impacto para un artículo sobre baterías de grafeno."
+                </div>
+            </div>
+
+            <!-- APARTADO 3 -->
+            <div class="section-title">3. Cadena de Pensamiento (Chain of Thought)</div>
+            <div class="tutorial-card">
+                <h3>Evita que la IA invente datos erróneos</h3>
+                <p>Para temas complejos, matemáticos o de investigación verídica, necesitas forzar a la Inteligencia Artificial a pensar paso a paso antes de darte el resultado final. Si le permites responder rápido, cometerá errores.</p>
+                
+                <div class="prompt-box">
+                    "Analiza el impacto económico de la automatización en el sector del transporte. **Antes de darme tus conclusiones finales, escribe un desglose paso a paso** de los pros y contras financieros, analiza la pérdida de empleo estimada y justifica matemáticamente tus deducciones. No saltes directamente al resumen.**"
+                </div>
+            </div>
+        </main>
+
+        <!-- BARRA LATERAL INFORMATIVA -->
+        <aside>
+            <h3 style="color: #ffffff; font-size: 18px; margin-top: 0; border-b: 1px solid #374151; padding-bottom: 10px;">¿Cómo usar esta guía?</h3>
+            <p style="color: #9ca3af; font-size: 14px; line-height: 1.6;">Selecciona cualquiera de las cajas oscuras, copia el texto y experimenta cambiándolo con la temática de tus propios blogs automáticos.</p>
+            
+            <!-- ANUNCIO LATERAL EXTRA -->
+            <div class="anuncio-box" style="padding: 20px 10px;">
+                <span class="anuncio-tag">BANNER LATERAL (300x250)</span>
+                [ TU ANUNCIO LATERAL DE ADSTERRA ]
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Futuro IA. Escuela abierta de Inteligencia Artificial Avanzada.</p>
+    </footer>
+
+</body>
+</html>
