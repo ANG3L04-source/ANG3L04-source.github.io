@@ -58,7 +58,7 @@
         .hero-section h2 { font-size: 36px; color: #ffffff; margin-top: 0; }
         .hero-section p { color: #94a3b8; max-width: 800px; margin: 15px auto 0 auto; line-height: 1.7; font-size: 17px; }
 
-        /* TARJETAS PREMIUM DE SECCIONES CON DISEÑOS COMPLEJOS EN LUGAR DE IMÁGENES ROTAS */
+        /* TARJETAS PREMIUM DE SECCIONES CON DISEÑOS COMPLEJOS */
         .card { 
             background-color: #1f2937; 
             border-radius: 18px; 
@@ -95,8 +95,11 @@
         .tag.purple { background-color: rgba(139, 92, 246, 0.2); color: #c084fc; }
         .tag.green { background-color: rgba(16, 185, 129, 0.2); color: #34d399; }
         
-        .card h3 { font-size: 26px; margin: 15px 0 12px 0; color: #ffffff; font-weight: 800; }
-        .card p { color: #9ca3af; line-height: 1.8; font-size: 15px; margin-bottom: 0; }
+        .card h3 { font-size: 26px; margin: 15px 0 12px 0; font-weight: 800; }
+        .card h3 a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
+        .card h3 a:hover { color: #3b82f6; }
+        .card.purple-card h3 a:hover { color: #a78bfa; }
+        .card p { color: #9ca3af; line-height: 1.8; font-size: 15px; margin-bottom: 15px; }
         
         /* BLOQUES DE PUBLICIDAD PERFECTAMENTE DESTACADOS */
         .anuncio-box { 
@@ -120,6 +123,34 @@
         .news-link:hover { color: #3b82f6; }
         
         footer { text-align: center; padding: 40px; color: #4b5563; border-top: 1px solid #1f2937; margin-top: 60px; font-size: 14px; }
+        
+        /* BOTÓN LEER MÁS */
+        .btn-leer-mas {
+            display: inline-block;
+            background-color: transparent;
+            color: #3b82f6;
+            border: 1px solid #3b82f6;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-leer-mas:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-leer-mas.purple-btn {
+            color: #a78bfa;
+            border-color: #a78bfa;
+        }
+        .btn-leer-mas.purple-btn:hover {
+            background-color: #a78bfa;
+            color: #0b0f19;
+            box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -140,16 +171,15 @@
         <div class="anuncio-box">
             <span class="anuncio-tag">ZONA PUBLICITARIA SUPERIOR (BANNER 728x90)</span>
             <script>
-  atOptions = {
-    'key' : 'be05e040cfeb142ddd2353a724a11ff9',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/be05e040cfeb142ddd2353a724a11ff9/invoke.js"></script>
-
+              atOptions = {
+                'key' : 'be05e040cfeb142ddd2353a724a11ff9',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://highperformanceformat.com"></script>
         </div>
     </div>
 
@@ -166,32 +196,11 @@
 
             <!-- Artículo 1 -->
             <article class="card">
-                <!-- Imagen tecnológica simulada en CSS azul -->
                 <div class="image-container-1">
                     <div class="tech-circle"></div>
                     <div class="tech-line"></div>
                 </div>
                 <div class="card-content">
                     <span class="tag">Estrategia Global</span>
-                    <h3><a href="articulo-nichos.html" style="color: #ffffff; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='#ffffff'">Modelos de Negocio Automáticos: La Revolución de los Blogs de Nicho</a></h3>
-
-                    <p>La Inteligencia Artificial ha destruido los modelos tradicionales de redacción digital en Internet. En la actualidad, el verdadero beneficio no radica en escribir textos manualmente durante horas, sino en saber orquestar redes de blogs automáticos de nicho. Al alimentar de manera estratégica e inteligente múltiples dominios con artículos SEO extensos que resuelven las intenciones de búsqueda de Google, se consiguen miles de clics automatizados y flujos constantes de ingresos mediante publicidad de alta conversión.</p>
-                </div>
-            </article>
-
-            <!-- ANUNCIO INTEGRADO CENTRAL -->
-            <div class="anuncio-box">
-                <span class="anuncio-tag">PUBLICIDAD EN CONTENIDO DE ALTO COMPROMISO (NATIVE BANNER)</span>
-                [ PEGA AQUÍ TU SEGUNDO CÓDIGO DE ADSTERRA ]
-            </div>
-
-            <!-- Artículo 2 -->
-            <article class="card">
-                <!-- Imagen tecnológica simulada en CSS morado -->
-                <div class="image-container-2">
-                    <div class="tech-circle" style="width: 160px; height: 160px;"></div>
-                    <div class="tech-line" style="transform: rotate(15deg);"></div>
-                </div>
-                <div class="card-content">
-                    <span class="tag purple">Optimización SEO</span>
-                    <h3>Sistemas Avanzados de Tráfico Masivo sin Inversión</h3>
+                    <h3><a href="articulo-nichos.html">Modelos de Negocio Automáticos: La Revolución de los Blogs de Nicho</a></h3>
+                    <p>La Inteligencia Artificial ha destruido los models tradicionales de redacción digital en Internet. En la actualidad, el verdadero beneficio no radica en escribir textos manualmente durante horas, sino en saber orquestar redes de blogs automáticos de nicho. Al alimentar de manera estratégica e inteligente múltiples dominios con artículos SEO extensos que resuelven las intenciones de búsqueda de Google, se consiguen miles de clics automatizados y flujos constantes de ingresos mediante publicidad de alta conversión.</p>
