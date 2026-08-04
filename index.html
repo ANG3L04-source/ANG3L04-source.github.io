@@ -1,147 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro IA | El Portal Líder de Inteligencia Artificial Avanzada</title>
-    <style>
-        body { background-color: #060814; color: #f3f4f6; font-family: system-ui, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #0b0f19; padding: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); text-align: center; }
-        .logo { font-size: 28px; font-weight: 900; background: linear-gradient(135deg, #a78bfa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; }
-        nav { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
-        nav a { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500; }
-        nav a:hover { color: #a78bfa; }
-        .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
-        @media (min-width: 992px) { .main-container { grid-template-columns: 2.5fr 1fr; } }
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .metric-widget { background-color: #0b0f19; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 15px; }
-        .metric-widget h4 { color: #64748b; font-size: 11px; text-transform: uppercase; margin: 0 0 5px 0; }
-        .metric-value { font-size: 24px; font-weight: 800; color: #ffffff; }
-        .intro-section { background-color: #0b0f19; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 25px; margin-bottom: 30px; }
-        .intro-section h2 { font-size: 24px; margin-top: 0; color: #ffffff; }
-        .intro-section p { color: #94a3b8; line-height: 1.6; font-size: 15px; }
-        .hero-section { background: linear-gradient(135deg, rgba(30, 27, 75, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 16px; padding: 25px; margin-bottom: 30px; }
-        .card { background-color: #0b0f19; border-radius: 16px; overflow: hidden; margin-bottom: 30px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .card-content { padding: 25px; }
-        .tag { background: rgba(59, 130, 246, 0.1); color: #60a5fa; padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
-        .card h3 { font-size: 22px; margin: 15px 0 10px 0; }
-        .card h3 a { color: #ffffff; text-decoration: none; }
-        .card h3 a:hover { color: #a78bfa; }
-        .card p { color: #94a3b8; line-height: 1.6; font-size: 14px; margin-bottom: 15px; }
-        .btn-leer-mas { display: inline-block; background: rgba(255, 255, 255, 0.03); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 10px; font-size: 13px; text-decoration: none; font-weight: 600; }
-        .btn-leer-mas:hover { background: #3b82f6; border-color: transparent; }
-        .table-section { background-color: #0b0f19; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 25px; margin-bottom: 30px; }
-        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
-        th, td { padding: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        th { color: #64748b; text-transform: uppercase; font-size: 11px; }
-        .status-badge { background-color: rgba(16, 185, 129, 0.1); color: #34d399; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
-        .anuncio-box { border: 1px dashed rgba(255, 255, 255, 0.15); background: rgba(11, 15, 30, 0.6); padding: 25px; text-align: center; border-radius: 16px; margin: 20px 0; color: #64748b; font-family: monospace; font-size: 13px; }
-        aside { background-color: #0b0f19; padding: 25px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); height: fit-content; }
-        .sidebar-section { border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 20px; margin-bottom: 20px; }
-        .sidebar-section h4 { color: #64748b; font-size: 12px; margin: 0 0 10px 0; text-transform: uppercase; }
-        .news-item { margin-bottom: 12px; font-size: 13px; }
-        .news-date { color: #a78bfa; font-weight: bold; display: block; }
-        .news-link { color: #ffffff; text-decoration: none; }
-        footer { text-align: center; padding: 30px; color: #475569; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 40px; font-size: 13px; }
-    </style>
-</head>
-<body>
+---
+layout: default
+title: Inicio
+---
 
-    <header>
-        <h1 class="logo">FUTURO IA</h1>
-        <nav>
-            <a href="index.html" style="color: #a78bfa; font-weight: bold;">Inicio</a>
-            <a href="tutoriales.html">Tutoriales Prompts</a>
-            <a href="herramientas.html">Herramientas Gratuitas</a>
-            <a href="ganar-dinero.html">Guía Monetización</a>
-        </nav>
-    </header>
-
-    <div style="max-width: 1250px; margin: 20px auto 0 auto; padding: 0 20px;">
-        <div class="anuncio-box">
-            <span style="color: #a78bfa; font-weight: bold; display: block; margin-bottom: 5px;">ZONA PUBLICITARIA SUPERIOR (BANNER 728x90)</span>
-            <script>
-              atOptions = {
-                'key' : 'be05e040cfeb142ddd2353a724a11ff9',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-              };
-            </script>
-            <script src="https://highperformanceformat.com"></script>
-        </div>
+<div class="metrics-grid">
+    <div class="metric-widget">
+        <h4>Global AI Adopción</h4>
+        <div class="metric-value">84.2M</div>
     </div>
+    <div class="metric-widget">
+        <h4>Velocidad Media</h4>
+        <div class="metric-value">1,450 t/s</div>
+    </div>
+    <div class="metric-widget">
+        <h4>Precisión</h4>
+        <div class="metric-value">99.1%</div>
+    </div>
+</div>
 
-    <div class="main-container">
-        <main>
-            <div class="metrics-grid">
-                <div class="metric-widget">
-                    <h4>Global AI Adopción</h4>
-                    <div class="metric-value">84.2M</div>
-                </div>
-                <div class="metric-widget">
-                    <h4>Velocidad Media</h4>
-                    <div class="metric-value">1,450 t/s</div>
-                </div>
-                <div class="metric-widget">
-                    <h4>Precisión</h4>
-                    <div class="metric-value">99.1%</div>
-                </div>
-            </div>
+<section class="intro-section">
+    <h2>Bienvenido a Futuro IA: El Epicentro de la Automatización</h2>
+    <p>Estás dentro del portal de monitorización, análisis y distribución de activos digitales más denso de la red. Futuro IA es una infraestructura diseñada para diseccionar la revolución de la Inteligencia Artificial y enseñarte a utilizar modelos lingüísticos avanzados como herramientas de generación de capital pasivo a largo plazo. Aquí nos enfocamos en datos crudos y medibles.</p>
+    <p>Nuestra misión es proporcionarte metodologías de ingeniería de instrucciones validadas (prompts), bases de datos de software 100% libre de suscripciones y análisis técnicos de monetización de tráfico. Al dominar el diseño de consultas refinadas, puedes transformar simples flujos de cómputo en páginas web densas y estructuradas capaces de responder las intenciones de búsqueda más exigentes de los usuarios.</p>
+</section>
 
-            <section class="intro-section">
-                <h2>Bienvenido a Futuro IA: El Epicentro de la Automatización</h2>
-                <p>Estás dentro del portal de monitorización, análisis y distribución de activos digitales más denso de la red. Futuro IA es una infraestructura diseñada para diseccionar la revolución de la Inteligencia Artificial y enseñarte a utilizar modelos lingüísticos avanzados como herramientas de generación de capital pasivo a largo plazo. Aquí nos enfocamos en datos crudos y medibles.</p>
-                <p>Nuestra misión es proporcionarte metodologías de ingeniería de instrucciones validadas (prompts), bases de datos de software 100% libre de suscripciones y análisis técnicos de monetización de tráfico. Al dominar el diseño de consultas refinadas, puedes transformar simples flujos de cómputo en páginas web densas y estructuradas capaces de responder las intenciones de búsqueda más exigentes de los usuarios.</p>
-            </section>
+<section class="hero-section">
+    <h2>Bienvenido de nuevo, Innovador</h2>
+    <p>Monitorea y domina las metodologías avanzadas del ecosistema de la Inteligencia Artificial. Te proporcionamos las estructuras técnicas y los directorios de software libre necesarios para levantar activos digitales automatizados capaces de dominar los clics mundiales.</p>
+</section>
 
-            <section class="hero-section">
-                <h2>Bienvenido de nuevo, Innovador</h2>
-                <p>Monitorea y domina las metodologías avanzadas del ecosistema de la Inteligencia Artificial. Te proporcionamos las estructuras técnicas y los directorios de software libre necesarios para levantar activos digitales automatizados capaces de dominar los clics mundiales.</p>
-            </section>
+<article class="card">
+    <img class="card-img" src="{{ '/assets/ia.png' | relative_url }}" alt="Red neuronal de inteligencia artificial representada como nodos interconectados">
+    <div class="card-content">
+        <span class="tag">Estrategia Activos</span>
+        <h3><a href="{{ '/articulo-nichos.html' | relative_url }}">Modelos de Negocio Automáticos: La Revolución de los Blogs de Nicho</a></h3>
+        <p>La Inteligencia Artificial ha destruido por completo los modelos tradicionales de redacción digital en Internet. En la actualidad, el verdadero beneficio no radica en escribir textos manualmente durante horas, sino en saber orquestar redes avanzadas de blogs automáticos de nicho. Al alimentar de manera estratégica múltiples dominios con artículos SEO masivos, se consiguen flujos constantes de ingresos pasivos por clics.</p>
+        <a href="{{ '/articulo-nichos.html' | relative_url }}" class="btn-leer-mas">Explorar Módulos →</a>
+    </div>
+</article>
 
-            <article class="card">
-                <img class="card-img" src="ia.png" alt="Red neuronal de inteligencia artificial representada como nodos interconectados">
-                <div class="card-content">
-                    <span class="tag">Estrategia Activos</span>
-                    <h3><a href="articulo-nichos.html">Modelos de Negocio Automáticos: La Revolución de los Blogs de Nicho</a></h3>
-                    <p>La Inteligencia Artificial ha destruido por completo los modelos tradicionales de redacción digital en Internet. En la actualidad, el verdadero beneficio no radica en escribir textos manualmente durante horas, sino en saber orquestar redes avanzadas de blogs automáticos de nicho. Al alimentar de manera estratégica múltiples dominios con artículos SEO masivos, se consiguen flujos constantes de ingresos pasivos por clics.</p>
-                    <a href="articulo-nichos.html" class="btn-leer-mas">Explorar Módulos →</a>
-                </div>
-            </article>
+<div class="table-section">
+    <h3>Monitorización de Modelos Neuronales 2026</h3>
+    <p style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin-top: -10px; margin-bottom: 25px;">
+        <strong>¿Qué es esta tabla y cómo te ayuda a ganar dinero?</strong><br><br>
+        Para montar un negocio automático en internet que te genere ingresos pasivos, necesitas que una Inteligencia Artificial escriba los artículos por ti. Esta tabla compara las mejores opciones del mercado para que sepas cuál elegir según tu estrategia:<br><br>
+        • Si buscas la <strong>máxima calidad y textos que parezcan humanos</strong> para que la gente se quede enganchada leyendo tus anuncios, tu opción es <em>Claude 3.5 Sonnet</em>.<br>
+        • Si prefieres <strong>crear decenas de páginas web muy rápido y al menor coste posible</strong> para multiplicar tus posibilidades de recibir clics, la mejor es <em>ChatGPT-4o mini</em>.<br><br>
+        Mira los datos de abajo para elegir el motor de tu fábrica de contenido.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo de IA</th>
+                <th>Contexto</th>
+                <th>Latencia</th>
+                <th>Eficiencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Claude 3.5 Sonnet</td><td>200k tokens</td><td>240ms</td><td><span class="status-badge">Óptima</span></td></tr>
+            <tr><td>ChatGPT-4o mini</td><td>128k tokens</td><td>110ms</td><td><span class="status-badge">Ultra-Rápida</span></td></tr>
+            <tr><td>DeepSeek-V3 Open</td><td>64k tokens</td><td>310ms</td><td><span class="status-badge">Eficiente</span></td></tr>
+        </tbody>
+    </table>
+</div>
 
-                      <div class="table-section">
-                <h3>Monitorización de Modelos Neuronales 2026</h3>
-                <p style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin-top: -10px; margin-bottom: 25px;">
-                    <strong>¿Qué es esta tabla y cómo te ayuda a ganar dinero?</strong><br><br>
-                    Para montar un negocio automático en internet que te genere ingresos pasivos, necesitas que una Inteligencia Artificial escriba los artículos por ti. Esta tabla compara las mejores opciones del mercado para que sepas cuál elegir según tu estrategia:<br><br>
-                    • Si buscas la <strong>máxima calidad y textos que parezcan humanos</strong> para que la gente se quede enganchada leyendo tus anuncios, tu opción es <em>Claude 3.5 Sonnet</em>.<br>
-                    • Si prefieres <strong>crear decenas de páginas web muy rápido y al menor coste posible</strong> para multiplicar tus posibilidades de recibir clics, la mejor es <em>ChatGPT-4o mini</em>.<br><br>
-                    Mira los datos de abajo para elegir el motor de tu fábrica de contenido.
-                </p>
-                <table>
-                    <thead>
-
-                        <tr>
-                            <th>Modelo de IA</th>
-                            <th>Contexto</th>
-                            <th>Latencia</th>
-                            <th>Eficiencia</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Claude 3.5 Sonnet</td><td>200k tokens</td><td>240ms</td><td><span class="status-badge">Óptima</span></td></tr>
-                        <tr><td>ChatGPT-4o mini</td><td>128k tokens</td><td>110ms</td><td><span class="status-badge">Ultra-Rápida</span></td></tr>
-                        <tr><td>DeepSeek-V3 Open</td><td>64k tokens</td><td>310ms</td><td><span class="status-badge">Eficiente</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="anuncio-box">
-                <span class="anuncio-tag">PUBLICIDAD INTEGRADA EN RED (NATIVE BANNER)</span>
-                [ PEGA AQUÍ TU SEGUNDO CÓDIGO DE ADSTERRA ]
-            </div>
-
-
+<div class="anuncio-box">
+    <span class="anuncio-tag">PUBLICIDAD INTEGRADA EN RED (NATIVE BANNER)</span><br>
+    <!-- Pega aquí tu segundo código de Adsterra -->
+</div>
