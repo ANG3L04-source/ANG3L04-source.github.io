@@ -8,9 +8,9 @@
         body { background-color: #060814; color: #f3f4f6; font-family: system-ui, sans-serif; margin: 0; padding: 0; }
         header { background-color: #0b0f19; padding: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); text-align: center; }
         .logo { font-size: 28px; font-weight: 900; background: linear-gradient(135deg, #a78bfa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; }
-       header nav { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
-       header nav a { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500; }
-       header nav a:hover { color: #a78bfa; }
+        header nav { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
+        header nav a { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500; }
+        header nav a:hover { color: #a78bfa; }
         .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
         @media (min-width: 992px) { .main-container { grid-template-columns: 220px 1fr; } }
         .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
@@ -48,6 +48,15 @@
         .index-lateral a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.03); }
         .index-lateral a.activo { color: #a78bfa; background: rgba(167, 139, 250, 0.1); font-weight: 700; }
         footer { text-align: center; padding: 30px; color: #475569; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 40px; font-size: 13px; }
+        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #0b0f19; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 18px 20px; z-index: 1000; display: none; }
+        #cookie-banner.visible { display: flex; }
+        .cookie-banner-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; width: 100%; }
+        .cookie-banner-inner p { color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0; flex: 1; min-width: 240px; }
+        .cookie-banner-inner p a { color: #a78bfa; }
+        .cookie-banner-botones { display: flex; gap: 10px; flex-shrink: 0; }
+        .cookie-btn { padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .cookie-btn-aceptar { background: #3b82f6; color: #ffffff; border-color: transparent; }
+        .cookie-btn-rechazar { background: transparent; color: #94a3b8; }
     </style>
 </head>
 <body>
@@ -63,18 +72,8 @@
     </header>
 
     <div style="max-width: 1250px; margin: 20px auto 0 auto; padding: 0 20px;">
-        <div class="anuncio-box">
+        <div class="anuncio-box" id="anuncio-superior">
             <span style="color: #a78bfa; font-weight: bold; display: block; margin-bottom: 5px;">ZONA PUBLICITARIA SUPERIOR (BANNER 728x90)</span>
-            <script>
-              atOptions = {
-                'key' : 'be05e040cfeb142ddd2353a724a11ff9',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-              };
-            </script>
-            <script src="https://highperformanceformat.com"></script>
         </div>
     </div>
 
@@ -151,9 +150,51 @@
     </div>
 
     <footer>
-        &copy; {{ site.time | date: '%Y' }} Futuro IA. Todos los derechos reservados.
-         <a href="{{ '/privacidad.html' | relative_url }}" style="color: #94a3b8;">Política de Privacidad</a>
+        &copy; {{ site.time | date: '%Y' }} Futuro IA. Todos los derechos reservados. ·
+        <a href="{{ '/privacidad.html' | relative_url }}" style="color: #94a3b8;">Política de Privacidad</a>
     </footer>
+    <div id="cookie-banner">
+        <div class="cookie-banner-inner">
+            <p>Usamos cookies propias y de nuestros anunciantes para mostrar publicidad. Puedes aceptar o rechazar su uso. Más información en nuestra <a href="{{ '/privacidad.html' | relative_url }}">Política de Privacidad</a>.</p>
+            <div class="cookie-banner-botones">
+                <button class="cookie-btn cookie-btn-rechazar" onclick="gestionarCookies(false)">Rechazar</button>
+                <button class="cookie-btn cookie-btn-aceptar" onclick="gestionarCookies(true)">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cargarAnunciosAdsterra() {
+            var contenedor = document.getElementById('anuncio-superior');
+            if (!contenedor) return;
+
+            var scriptConfig = document.createElement('script');
+            scriptConfig.text = "atOptions = { 'key' : 'be05e040cfeb142ddd2353a724a11ff9', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };";
+            contenedor.appendChild(scriptConfig);
+
+            var scriptAnuncio = document.createElement('script');
+            scriptAnuncio.src = 'https://highperformanceformat.com';
+            contenedor.appendChild(scriptAnuncio);
+        }
+
+        function gestionarCookies(aceptado) {
+            localStorage.setItem('futuroia_cookies_consent', aceptado ? 'aceptado' : 'rechazado');
+            document.getElementById('cookie-banner').classList.remove('visible');
+            if (aceptado) {
+                cargarAnunciosAdsterra();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var consentimiento = localStorage.getItem('futuroia_cookies_consent');
+            if (consentimiento === 'aceptado') {
+                cargarAnunciosAdsterra();
+            } else if (consentimiento === null) {
+                document.getElementById('cookie-banner').classList.add('visible');
+            }
+            // Si el valor es 'rechazado', no se hace nada: no se cargan anuncios ni se muestra el banner de nuevo.
+        });
+    </script>
 
 </body>
 </html>
