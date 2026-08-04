@@ -29,15 +29,20 @@ title: Inicio
     <p>Monitorea y domina las metodologías avanzadas del ecosistema de la Inteligencia Artificial. Te proporcionamos las estructuras técnicas y los directorios de software libre necesarios para levantar activos digitales automatizados capaces de dominar los clics mundiales.</p>
 </section>
 
+<h3 style="color:#ffffff; margin: 40px 0 15px 4px;">Últimos Artículos</h3>
+{% for post in site.posts limit:5 %}
 <article class="card">
-    <img class="card-img" src="{{ '/assets/ia.png' | relative_url }}" alt="Red neuronal de inteligencia artificial representada como nodos interconectados">
+    {% if post.image %}
+    <img class="card-img" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+    {% endif %}
     <div class="card-content">
-        <span class="tag">Estrategia Activos</span>
-        <h3><a href="{{ '/articulo-nichos.html' | relative_url }}">Modelos de Negocio Automáticos: La Revolución de los Blogs de Nicho</a></h3>
-        <p>La Inteligencia Artificial ha destruido por completo los modelos tradicionales de redacción digital en Internet. En la actualidad, el verdadero beneficio no radica en escribir textos manualmente durante horas, sino en saber orquestar redes avanzadas de blogs automáticos de nicho. Al alimentar de manera estratégica múltiples dominios con artículos SEO masivos, se consiguen flujos constantes de ingresos pasivos por clics.</p>
-        <a href="{{ '/articulo-nichos.html' | relative_url }}" class="btn-leer-mas">Explorar Módulos →</a>
+        {% if post.tag %}<span class="tag">{{ post.tag }}</span>{% endif %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        <a href="{{ post.url | relative_url }}" class="btn-leer-mas">Explorar Módulos →</a>
     </div>
 </article>
+{% endfor %}
 
 <div class="table-section">
     <h3>Monitorización de Modelos Neuronales 2026</h3>
